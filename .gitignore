@@ -1,0 +1,11 @@
+# Ignore everything
+*
+
+# Except christmas-tree and hinh folders
+!christmas-tree/
+!christmas-tree/**
+!hinh/
+!hinh/**
+!.gitignore
+!README.md
+!index.html
