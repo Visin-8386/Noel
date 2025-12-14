@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎄 Cây Thông Noel - Điều Khiển Bằng Cử Chỉ Tay</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Three.js Canvas -->
+    <canvas id="christmas-canvas"></canvas>
+    
+    <!-- Webcam Preview -->
+    <div id="webcam-container">
+        <video id="webcam" autoplay playsinline></video>
+        <div id="gesture-indicator">
+            <span id="gesture-icon">🖐️</span>
+            <span id="gesture-text">Đang chờ...</span>
+        </div>
+    </div>
+    
+    <!-- Title -->
+    <div id="title-container">
+        <h1>MERRY CHRISTMAS</h1>
+        <p class="subtitle">Điều khiển bằng cử chỉ tay</p>
+    </div>
+    
+    <!-- Gesture Instructions -->
+    <div id="instructions">
+        <div class="instruction">
+            <span class="gesture-emoji">✊</span>
+            <span>Nắm tay = Hội tụ cây</span>
+        </div>
+        <div class="instruction">
+            <span class="gesture-emoji">🖐️</span>
+            <span>Mở tay = Bung ảnh</span>
+        </div>
+        <div class="instruction">
+            <span class="gesture-emoji">👌</span>
+            <span>OK = Zoom ảnh</span>
+        </div>
+        <div class="instruction">
+            <span class="gesture-emoji">🔄</span>
+            <span>Xoay tay = Xoay cây</span>
+        </div>
+    </div>
+    
+    <!-- Zoomed Image Overlay -->
+    <div id="zoom-overlay" class="hidden">
+        <img id="zoomed-image" src="" alt="Zoomed Image">
+        <button id="close-zoom">✕</button>
+    </div>
+    
+    <!-- Loading Screen -->
+    <div id="loading">
+        <div class="loader"></div>
+        <p>Đang tải camera...</p>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands@0.4.1675469240/hands.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils@0.3.1675466862/camera_utils.min.js"></script>
+    <script src="handTracking.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
